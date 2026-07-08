@@ -1,69 +1,57 @@
 # Retention Agent Copilot
 
-Retention Agent Copilot is a portfolio-ready AI product prototype for a telecom call-centre retention workflow.
+Retention Agent Copilot is a **portfolio static demo** for a telecom call-centre retention workflow.
 
-The goal is to help an agent read a Rogers-style bill faster, break down charges clearly, avoid missing add-ons, device payments, one-time charges, roaming, or expiring promotions, and generate short live talk-track suggestions during a customer call.
+It shows how an agent could quickly review a Rogers-style bill, identify price drivers such as expiring discounts, device financing, roaming, one-time charges, and bundle changes, then generate short talk-track guidance and a copy-ready service note.
 
-## Portfolio Demo
+## Live Demo
 
-The public demo uses synthetic sample data only. It is safe to publish as a static GitHub Pages portfolio demo.
+[Open the GitHub Pages demo](https://disonzzz.github.io/retention-agent-copilot/)
 
-Live demo:
+## Important Scope
 
-`https://disonzzz.github.io/retention-agent-copilot/`
+This repository is **not a production product**.
 
-Static demo entry:
+- The public demo uses synthetic sample data only.
+- It does not connect to Rogers, Maestro, CRM, billing systems, or offer eligibility systems.
+- It does not store real customer bills, recordings, account numbers, payment IDs, addresses, or phone numbers.
+- The Agent Assist logic is rule-based for demo purposes, not a live LLM production agent.
+- Final prices, discounts, and retention offers must always be verified in the official system.
 
-`app/dist/index.html`
+## What The Demo Shows
 
-To refresh the static demo:
+- Static single-page agent workspace.
+- Synthetic wireless and internet / bundle bill breakdown.
+- Original plan price, discount detail, visible expiry date, current before-tax monthly cost, and this-bill total.
+- HUP / device financing details behind a click-to-expand line view.
+- Bill driver flags for roaming, one-time charges, device payments, and promo expiry.
+- Rule-based Agent Assist with call stage, suggested response, follow-up question, and Maestro note preview.
+- GitHub Pages deployment and basic public-safety tests.
+
+## Run Locally
 
 ```bash
 cd app
 node scripts/build.mjs
+node --test
 ```
 
-GitHub Pages can publish the static files from `app/dist`. The static version shows the product workflow and synthetic sample account. The full PDF upload and local audio transcription workflows require the local server.
+Open the static page from:
 
-## Local Full Workflow
-
-Run the local server when you want PDF upload analysis and local audio test routes:
-
-```bash
-cd app
-python scripts/server.py
+```text
+app/dist/index.html
 ```
-
-Then open:
-
-`http://127.0.0.1:8765/`
-
-## Current Features
-
-- Synthetic public demo data for safe portfolio viewing.
-- Compact bill breakdown with source page, original price, current before-tax monthly price, this-bill total, bill drivers, and contract end.
-- Line-level discount detail with expiry dates when visible.
-- HUP / device financing detail behind a click-to-expand line workflow.
-- Internet / bundle service display.
-- Live Agent Assist with call stage, suggested response, follow-up question, AI-understood bullets, and Maestro note preview.
-- Local PDF analysis and local audio transcription workflow for development testing.
-- Automated tests and validation matrix.
 
 ## Portfolio Materials
 
-- Project overview: `portfolio/project-overview.md`
-- Telecom sales one-pager: `portfolio/telecom-sales-one-pager.md`
-- Chinese sales guide: `portfolio/telecom-sales-one-pager-zh.md`
-- GitHub Pages publishing notes: `portfolio/github-pages-portfolio-setup-zh.md`
+- [Project overview](portfolio/project-overview.md)
+- [Architecture diagram](portfolio/architecture.md)
+- [Demo walkthrough](portfolio/demo-walkthrough.md)
+- [Telecom sales one-pager](portfolio/telecom-sales-one-pager.md)
+- [Chinese sales guide](portfolio/telecom-sales-one-pager-zh.md)
+- [GitHub Pages publishing notes](portfolio/github-pages-portfolio-setup-zh.md)
 
-Personal interview preparation notes are intentionally not included in this public repository.
+## Privacy Boundary
 
-## Important Safety Boundary
+Use fake, synthetic, public, or redacted data only. Do not publish raw customer PDFs, screenshots, call recordings, transcripts, account numbers, phone numbers, addresses, or payment IDs.
 
-This project should use fake, synthetic, public, or redacted data only.
-
-It should not store real customer bills, real customer recordings, account numbers, addresses, payment IDs, or phone numbers.
-
-The tool should not promise offer eligibility or final prices. Final offers must always be verified in the official system.
-
-Do not publish raw customer bill PDFs, extracted private text, call recordings, or screenshots containing real customer identifiers.

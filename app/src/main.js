@@ -784,7 +784,7 @@ app.addEventListener("change", (event) => {
     activeUploadController = controller;
     analyzeUploadedPdf(file, requestId, controller).catch((error) => {
       if (requestId !== uploadRequestId || error?.name === "AbortError") return;
-      uploadStatus = "PDF analysis needs the local server. Start it with: python scripts/server.py";
+      uploadStatus = "PDF analysis is not available in this static portfolio demo.";
       render();
     });
     return;

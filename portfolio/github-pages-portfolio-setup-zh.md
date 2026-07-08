@@ -11,18 +11,7 @@
 
 GitHub Pages 适合发布 HTML、CSS、JavaScript 静态页面。它不能直接运行本地 Python server，所以公开网页版本适合展示产品效果，但不能完整运行 PDF 上传解析后端。
 
-完整 PDF 上传分析应该在本地运行：
-
-```bash
-cd app
-python scripts/server.py
-```
-
-然后打开：
-
-```text
-http://127.0.0.1:8765/
-```
+当前公开仓库只发布静态 demo。完整 PDF 上传分析需要单独的私有后端或本地服务实现，公开 GitHub Pages 版本不会处理真实客户 PDF。
 
 ## 可以公开上传的内容
 
@@ -57,5 +46,4 @@ http://127.0.0.1:8765/
 
 ## 对外解释方式
 
-为了隐私，在线 demo 的账号、电话号码、账单号都已经替换成 synthetic data。公开网页只展示产品 workflow；真实 PDF 解析能力保留在本地 server 和测试里展示。这样既能保护客户信息，也能让别人看到完整产品思路。
-
+为了隐私，在线 demo 的账号、电话号码、账单号都已经替换成 synthetic data。公开网页只展示产品 workflow；真实 PDF 解析能力应该放在私有或本地后端中继续扩展。这样既能保护客户信息，也能让别人看到完整产品思路。
