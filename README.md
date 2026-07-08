@@ -49,14 +49,14 @@ Then open:
 - Local PDF analysis and local audio transcription workflow for development testing.
 - Automated tests and validation matrix.
 
-## Design Docs
+## Portfolio Materials
 
-- English design: `docs/superpowers/specs/2026-06-16-retention-agent-copilot-design.md`
-- Chinese design: `docs/superpowers/specs/2026-06-16-retention-agent-copilot-design-zh.md`
-- Interview demo package: `docs/demo/interview-demo-package.md`
-- Chinese interview guide: `docs/demo/interview-demo-package-zh.md`
-- Telecom sales one-pager: `docs/demo/telecom-sales-one-pager.md`
-- Chinese sales guide: `docs/demo/telecom-sales-one-pager-zh.md`
+- Project overview: `portfolio/project-overview.md`
+- Telecom sales one-pager: `portfolio/telecom-sales-one-pager.md`
+- Chinese sales guide: `portfolio/telecom-sales-one-pager-zh.md`
+- GitHub Pages publishing notes: `portfolio/github-pages-portfolio-setup-zh.md`
+
+Personal interview preparation notes are intentionally not included in this public repository.
 
 ## Important Safety Boundary
 

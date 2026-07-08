@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readdir } from "node:fs/promises";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
@@ -20,4 +21,15 @@ test("public portfolio build has a GitHub Pages workflow", async () => {
   assert.match(workflow, /node scripts\/build\.mjs/);
   assert.match(workflow, /actions\/deploy-pages/);
   assert.match(workflow, /path: app\/dist/);
+});
+
+test("public repo keeps personal interview notes private", async () => {
+  const readme = await readFile(new URL("../../README.md", import.meta.url), "utf8");
+  const portfolioOverview = await readFile(new URL("../../portfolio/project-overview.md", import.meta.url), "utf8");
+  const portfolioFiles = await readdir(new URL("../../portfolio/", import.meta.url));
+
+  assert.match(portfolioOverview, /Retention Agent Copilot/);
+  assert.match(readme, /portfolio\/project-overview\.md/);
+  assert.doesNotMatch(readme, /interview-demo/i);
+  assert.ok(!portfolioFiles.some((file) => /interview-demo/i.test(file)));
 });
