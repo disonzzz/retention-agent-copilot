@@ -8,6 +8,10 @@ The goal is to help an agent read a Rogers-style bill faster, break down charges
 
 The public demo uses synthetic sample data only. It is safe to publish as a static GitHub Pages portfolio demo.
 
+Live demo:
+
+`https://disonzzz.github.io/retention-agent-copilot/`
+
 Static demo entry:
 
 `app/dist/index.html`
