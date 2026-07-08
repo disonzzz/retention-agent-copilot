@@ -1,0 +1,11 @@
+{
+  "name": "retention-agent-copilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "test:e2e": "node --test tests/e2e/*.test.mjs"
+  }
+}

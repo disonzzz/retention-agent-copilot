@@ -1,0 +1,14 @@
+.superpowers/
+node_modules/
+dist/
+build/
+.env
+.env.local
+*.log
+__pycache__/
+.pytest_cache/
+.worktrees/
+app/.venv-audio/
+app/.cache/whisper/
+app/fixtures/rogers-may23-extracted.txt
+*.pdf
